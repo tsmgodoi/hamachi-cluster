@@ -7,9 +7,9 @@ services:
 install: echo install
 script:
   - if [[ "JOB" == "1" ]]; then
-      echo 'job1'
+      echo 'job1';
     else
-      echo 'job2'
+      echo 'job2';
     fi
 env:
   global:
