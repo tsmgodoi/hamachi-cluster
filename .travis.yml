@@ -1,0 +1,19 @@
+sudo: required
+language: java
+jdk:
+- oraclejdk8
+services:
+- docker
+install: echo install
+script:
+  - if [[ "JOB" == "1" ]]; then
+      echo 'job1'
+    else
+      echo 'job2'
+    fi
+env:
+  global:
+  - VARIABLE=value
+  matrix:
+  - JOB=1
+  - JOB=2
