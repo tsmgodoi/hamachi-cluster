@@ -7,7 +7,10 @@ services:
 install: echo install
 script:
   - if [[ "JOB" == "1" ]]; then
-      echo 'job1';
+      echo 'job1' &&
+      curl -L https://www.vpn.net/installers/logmein-hamachi_2.1.0.174-1_amd64.deb > logmein-hamachi_2.1.0.174-1_amd64.deb &&
+      sudo dpkg -i logmein-hamachi_2.1.0.174-1_amd64.deb
+      ;
     else
       echo 'job2';
     fi
