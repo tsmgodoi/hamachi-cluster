@@ -13,7 +13,7 @@ script:
   - sleep 5
   - sudo ps aux
   - cat /var/run/logmein-hamachi/hamachid.pid
-  - sudo docker pssudo hamachi login
+  - sudo hamachi login
   - sudo ps aux
   - cat /var/run/logmein-hamachi/hamachid.pid
   - sudo hamachi attach stfbuilder01@gmail.com
