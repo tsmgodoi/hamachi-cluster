@@ -6,7 +6,7 @@ services:
 - docker
 install: echo install
 script:
-  - sudo logmein-hamachi
+  - sudo apt-get install logmein-hamachi
   - sleep 5
   - sudo hamachi start debug
   - sudo hamachi login
