@@ -12,7 +12,7 @@ script:
   - /etc/init.d/logmein-hamachi start
   - cat /var/run/logmein-hamachi/hamachid.pid
   - export PID=$(cat /var/run/logmein-hamachi/hamachid.pid)
-  - sudo strace -p${PID} -s9999 -e write -o trace.log&
+  - sudo modprobe tun
   - sleep 5
   - sudo ps aux
   - cat /var/run/logmein-hamachi/hamachid.pid
@@ -26,5 +26,4 @@ script:
   - sudo ps aux
   - cat /var/run/logmein-hamachi/hamachid.pid
 after_script:
-  - sudo cat trace.log
   - sudo hamachi logoff
