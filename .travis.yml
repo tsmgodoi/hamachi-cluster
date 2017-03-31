@@ -8,9 +8,7 @@ install: echo install
 script:
   - curl -L https://www.vpn.net/installers/logmein-hamachi_2.1.0.174-1_amd64.deb > logmein-hamachi_2.1.0.174-1_amd64.deb
   - sudo dpkg -i logmein-hamachi_2.1.0.174-1_amd64.deb
-  - sudo /etc/init.d/logmein-hamachi start
   - sleep 5
-  - sudo hamachi start debug
   - sudo hamachi login
   - sudo hamachi attach stfbuilder01@gmail.com
   - sudo hamachi join 365-437-734 123
